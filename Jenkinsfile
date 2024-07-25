@@ -21,7 +21,7 @@ pipeline {
                     sh "terraform apply --auto-approve"
 
                     env.K8S_CLUSTER_URL = sh(
-                        script: "terraform output cluster_url"
+                        script: "terraform output cluster_url",
                         returnStdout: true
                     ).trim()
 
