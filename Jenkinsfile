@@ -18,6 +18,7 @@ pipeline {
                 script {
                     echo "Creating EKS cluster..."
                     sh "terraform init"
+                    sh "ls"
                     sh "terraform apply -var-file='dev.tfvars' --auto-approve"
 
                     env.K8S_CLUSTER_URL = sh(
