@@ -1,3 +1,11 @@
+terraform {
+  backend "s3" {
+    bucket = "my-bucket-exercise"
+    key    = "myapp/state.tfstate"
+    region  = var.region
+  }
+}
+
 provider "aws" {
   region = var.region
 }
