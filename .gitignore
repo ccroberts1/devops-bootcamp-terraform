@@ -2,3 +2,8 @@
 build
 out
 .gradle*
+
+.terraform/*
+*.tfstate
+*.tfstate.*
+*.tfvars
