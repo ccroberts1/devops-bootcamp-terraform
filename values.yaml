@@ -1,0 +1,15 @@
+architecture: replication
+auth:
+  rootPassword: secret-root-pass
+  database: my-app-db
+  username: my-user
+  password: my-pass
+
+volumePermissions:
+  enabled: true
+
+secondary:
+  replicaCount: 2
+  persistence:
+    accessModes: ["ReadWriteOnce"]
+    storageClass: gp2
